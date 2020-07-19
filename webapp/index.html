@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Product Statistics</title>
+    <link rel="shortcut icon" href="/home/favicon.ico">
+    <script type="application/javascript"
+            id="sap-ui-bootstrap"
+            src="https://openui5.hana.ondemand.com/1.78.1/resources/sap-ui-core.js"
+            data-sap-ui-libs="sap.m,sap.ui.unified"
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-preload="async"
+            data-sap-ui-bindingSyntax="complex"
+            data-sap-ui-resourceroots='{"com.illumiti":"./"}'>
+    </script>
+    <script type="application/javascript">
+        // Create global variable
+        zGlobal = {
+                "URL_DATAENTRY": "/dataentry/",
+                "URL_I18N_SVC": "/i18nservice"
+        }
+        // Following requires needed for UI drag and drop
+        $.sap.require('sap.ui.thirdparty.jqueryui.jquery-ui-core');
+        $.sap.require('sap.ui.thirdparty.jqueryui.jquery-ui-widget');
+        $.sap.require('sap.ui.thirdparty.jqueryui.jquery-ui-mouse');
+        $.sap.require('sap.ui.thirdparty.jqueryui.jquery-ui-sortable');
+        $.sap.require('sap.ui.thirdparty.jqueryui.jquery-ui-draggable');
+        $.sap.require('sap.ui.thirdparty.jqueryui.jquery-ui-droppable');
+
+        var path = (window.location.hostname === "localhost") ? "/webapp/launchpad" : "/home/webapp/launchpad";
+        jQuery.sap.registerModulePath("com.illumiti.launchpad", path);
+
+        sap.ui.getCore().attachInit(function () {
+
+            new sap.ui.core.ComponentContainer('ShellContainer', {
+                name: "com.illumiti.shell",
+                height: "100%"
+            }).placeAt('content');
+        });
+
+    </script>
+</head>
+<body class="sapUiBody" id="content">
+</body>
+</html>

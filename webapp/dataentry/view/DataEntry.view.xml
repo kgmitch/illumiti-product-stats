@@ -1,0 +1,26 @@
+<mvc:View
+	height="100%"
+	controllerName="com.illumiti.dataentry.controller.App"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page
+		title="Data Entry"
+		class="sapUiContentPadding sapUiResponsivePadding--header sapUiResponsivePadding--subHeader sapUiResponsivePadding--content sapUiResponsivePadding--footer"
+		showNavButton="true"
+		navButtonPress="onPressBack"
+		>
+		<headerContent>
+		</headerContent>
+		<content>
+			<VBox>
+				<Text text="Hello World" />
+			</VBox>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button text="a Button" type="Accept" />
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

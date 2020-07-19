@@ -1,0 +1,14 @@
+<mvc:View height="100%"
+controllerName="com.illumiti.shell.controller.Shell"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m">
+    <App id="ShellApp">
+        <pages>
+        <Page
+            id="ShellPage"
+            showHeader="false"
+            enableScrolling="false" >
+        </Page>
+        </pages>
+    </App>
+</mvc:View>

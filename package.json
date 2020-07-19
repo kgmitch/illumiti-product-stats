@@ -1,0 +1,23 @@
+{
+  "name": "illumiti-product-stats",
+  "version": "1.0.1",
+  "description": "Product Statistics",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgmitch/illumiti-product-stats.git"
+  },
+  "author": "Keith Mitchell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kgmitch/illumiti-product-stats/issues"
+  },
+  "homepage": "https://github.com/kgmitch/illumiti-product-stats#readme",
+  "dependencies": {
+    "compression": "^1.7.2",
+    "express": "^4.16.4"
+  }
+}

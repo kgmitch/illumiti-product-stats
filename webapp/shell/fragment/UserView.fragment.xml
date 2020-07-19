@@ -1,0 +1,50 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <QuickView id="userView" placement="Left" class="sapUiSizeCompact">
+        <pages>
+            <QuickViewPage
+                    header="{UserProfile>/given_name} {UserProfile>/family_name}"
+            >
+                <groups>
+                    <QuickViewGroup heading="{i18n>userview.fragment.User_Information}">
+                        <elements>
+                            <QuickViewGroupElement
+                                    label="{i18n>userview.fragment.User_ID}"
+                                    value="{UserProfile>/id}"
+                                    type="text"
+                            >
+                            </QuickViewGroupElement>
+                            <QuickViewGroupElement
+                                    label="{i18n>userview.fragment.Email}"
+                                    value="{UserProfile>/email}"
+                                    type="text"
+                            >
+                            </QuickViewGroupElement>
+                        </elements>
+                    </QuickViewGroup>
+                    <QuickViewGroup heading="{i18n>userview.fragment.Partner_Info}">
+                        <elements>
+                            <QuickViewGroupElement
+                                    label="{i18n>userview.fragment.Partner_Name}"
+                                    value="{UserProfile>/partners/0/name}"
+                                    type="text"
+                            >
+                            </QuickViewGroupElement>
+                            <QuickViewGroupElement
+                                    label="{i18n>userview.fragment.Partner_Number}"
+                                    value="{UserProfile>/partners/0/parnum}"
+                                    type="text"
+                            >
+                            </QuickViewGroupElement>
+                            <QuickViewGroupElement
+                                    label="{i18n>userview.fragment.GLN}"
+                                    value="{UserProfile>/partners/0/gln}"
+                                    type="text"
+                            >
+                            </QuickViewGroupElement>
+                        </elements>
+                    </QuickViewGroup>
+                </groups>
+            </QuickViewPage>
+        </pages>
+    </QuickView>
+</core:FragmentDefinition>

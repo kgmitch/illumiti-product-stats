@@ -1,0 +1,30 @@
+[
+    {
+        "id": "dataentry", 
+        "appId": "dataentry", 
+        "title": "Data Entry",
+        "subtitle": "Enter statistics",
+        "footer": "Some footer",
+        "unit": "CA",
+        "kpivalue": 1,
+        "scale": "",
+        "color": "Good",
+        "trend": "Up",
+        "inactive": false,
+        "headerImage": ""
+    },
+    {
+        "id": "appAnalytics", 
+        "appId": "analytics", 
+        "title": "Analytics",
+        "subtitle": "Show analytics",
+        "footer": "Another footer",
+        "unit": "CA",
+        "kpivalue": 1,
+        "scale": "",
+        "color": "Good",
+        "trend": "Up",
+        "inactive": false,
+        "headerImage": ""
+    }
+]

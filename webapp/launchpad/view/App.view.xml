@@ -1,0 +1,50 @@
+<mvc:View height="100%"
+controllerName="com.illumiti.launchpad.controller.App"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:l="sap.ui.layout"
+xmlns="sap.m">
+    <Page
+        showHeader="true"
+        enableScrolling="false" 
+		icon="/webapp/shell/logo.png" 
+		>
+		<customHeader>
+		  <OverflowToolbar>
+		    <Image src="/webapp/shell/logo.png" height="35px"></Image>
+            <ToolbarSpacer />
+			<Title text="Product Statistics" />
+            <ToolbarSpacer />
+		    <Label text="Keith"></Label>
+			<Button icon="sap-icon://log" tooltip="User" />
+		  </OverflowToolbar>
+		</customHeader>
+
+		<content>
+	    <VBox class="sapUiTinyMargin">
+		   <l:HorizontalLayout id="TileContainerExpanded"
+				                    allowWrapping="true"
+				                    content="{/tiles}"
+				                    class="sapUiTinyMarginTopBottom">
+					<GenericTile header="{title}"
+					             subheader="{subtitle}"
+					             state="{=${state} || 'Loaded'}"
+					             scope="{/scope}"
+					             press="onTileClick"
+					             class="sapUiTinyMarginEnd"
+					             sizeBehavior="{/sizeBehavior}">
+						<TileContent unit="{unit}" footer="{footer}">
+		                    <ImageContent src="{icon}" />
+								</TileContent>
+					</GenericTile>
+			</l:HorizontalLayout>
+        </VBox>
+		</content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button text="something" press="handleEditPress" />
+                <ToolbarSpacer/>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

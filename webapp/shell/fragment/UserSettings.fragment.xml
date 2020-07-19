@@ -1,0 +1,77 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:l="sap.ui.layout"
+        xmlns:form="sap.ui.layout.form"
+        xmlns:f="sap.f"
+        xmlns:core="sap.ui.core">
+    <Popover
+            title="{UserProfile>/given_name} {UserProfile>/family_name}"
+            class="sapUiContentPadding"
+            contentWidth="40%"
+            placement="Bottom">
+
+        <VBox>
+            <HBox alignItems="Center">
+                <f:Avatar src="./shell/placeholder-profile.png" class="sapUiLargeMarginEnd"/>
+                <!-- <Label  text="{i18n>userview.fragment.User_ID}" design="Bold" class="sapUiSmallMarginEnd"/> -->
+                <Text text="{UserProfile>/id}"/>    
+            </HBox>            
+            <form:SimpleForm    
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="4"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="6"
+                adjustLabelSpan="false"
+                emptySpanXL="0"
+                emptySpanL="4"
+                emptySpanM="0"
+                emptySpanS="0"
+                columnsXL="2"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false">
+                <form:content>
+
+                    <Label  text="{i18n>userview.fragment.language}" design="Bold" labelFor="languageCombo"/>
+                    <ComboBox id="languageCombo"
+                            selectedKey="{UserProfile>/language}"
+                            selectionChange="onLanguageChange">
+                        <core:Item key="EN" text="English"/>
+                        <core:Item key="FR" text="French"/>
+                    </ComboBox>
+
+                    <Label  text="{i18n>userview.fragment.theme}" design="Bold"/>
+                    <ComboBox                                 selectedKey="{UserProfile>/theme}"
+                            selectionChange="onThemeChange">
+                        <core:Item key="sap_belize" text="Belize"/>
+                        <core:Item key="sap_belize_plus" text="Belize Plus"/>
+                        <core:Item key="sap_belize_hcw" text="Belize High Contrast White"/>
+                        <core:Item key="sap_belize_hcb" text="Belize High Contrast Black"/>
+                        <core:Item key="sap_bluecrystal" text="Blue Crystal"/>
+                        <core:Item key="sap_goldreflection" text="Gold Reflection"/>
+                        <core:Item key="sap_hcb" text="High Contrast Black"/>
+                        <core:Item key="bnxpurple" text="Purple Heart"/>
+                        <core:Item key="bnxpurpleplus" text="Purple Heart Plus"/>
+                    </ComboBox>
+                        <Label text="{i18n>userview.fragment.compact}" design="Bold"/>
+                        <Switch state="{UserProfile>/compactOn}" change="onDensitySwitch"/>
+
+                    <Label  text="{i18n>userview.fragment.Email}" design="Bold"/>
+                    <Text text="{UserProfile>/email}"/>
+                    <Label  text="{i18n>userview.fragment.Partner_Name}" design="Bold"/>
+                    <Text text="{UserProfile>/partners/0/name}"/>
+                    <Label  text="{i18n>userview.fragment.Partner_Number}" design="Bold"/>
+                    <Text text="{UserProfile>/partners/0/parnum}"/>
+
+                    <Label  text="{i18n>userview.fragment.GLN}" design="Bold"/>
+                    <Text text="{UserProfile>/partners/0/gln}"/>
+
+                </form:content>
+            </form:SimpleForm>
+            <Link text="Delegates" design="Bold" press="onDelegatesClick"/>
+        </VBox>
+
+    </Popover>
+</core:FragmentDefinition>
